@@ -16,12 +16,13 @@ use Illuminate\Http\Request;
 //List Articles
 Route::get('articles', 'ArticleController@index');
 
-//Get single request
-Route::get('article/{id}', 'ArticleController@show');
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Get single request
+Route::get('article/{id}', 'ArticleController@show');
 
 
